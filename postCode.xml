@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="PostCode Operations">
+<parameter name="level" value="sanity" />	
+
+	<!-- =========================================================================================================-->
+    <!-- =============================== POSTAL CODE OPERATION ===================================================-->
+    <!-- ===========================  1) Get Post Codes ==========================================================-->
+    <!-- ===========================  2) Validate Post Codes =====================================================-->
+    <!-- ===========================  3) Fetch Nearest Post Codes ================================================-->
+    <!-- ===========================  4) Get Suggested Post Codes ================================================-->
+    <!-- =========================================================================================================-->
+
+    <test name="UK Posal tCode Operations">
+	<parameter name="testData" value="./src/test/resources/com/Implementation/postCode.xls:postCode" />
+	<parameter name="testDataSets" value="All" />
+    	<classes>   
+        	<class name="com.Implementation.PostCode_Main"> 
+	         <methods>
+		             <include name="postCodeValidations"/>
+		 	    </methods>
+	 		</class>
+       	</classes>
+	</test>
+</suite>
+
+
+
